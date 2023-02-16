@@ -1,15 +1,15 @@
-<h1 align="center">✈️ Cartão de Embarque</h1>
+<div align="center">
+<h1>✈️ Cartão de Embarque</h1>
 
-<div style="display: inline_block">
+<div align="left" style="display: inline_block">
     <a href="https://github.com/dkat-davi/Mario-Game/blob/main/LICENSE" target="_blank">
         <img src="https://img.shields.io/badge/license-MIT-white" alt="license">
     </a>
     <img src="https://img.shields.io/badge/STATUS-FINISHED-blueviolet" alt="status-projeto">
-<div>
+</div>
 
 <br>
-<div align="center">
-    <img max-height="400em" src="./preview/boarding-pass-preview.gif" alt="login page">
+    <img style="min-width:300px" src="./preview/boarding-pass-preview.gif" alt="login page">
 </div>
 
 <p align="center"><strong><small>#boracodar um cartão de embarque</small></strong></p>
