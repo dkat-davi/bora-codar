@@ -78,6 +78,8 @@ section {
 
 .top {
     border-radius: 2.4rem 2.4rem 0 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.32);
+
     gap: 2.4rem;
 
     --mask: radial-gradient(
@@ -111,17 +113,28 @@ section {
     align-self: center;
 }
 
+.airplane:hover {
+    transform: rotate(-30deg);
+    animation: animation-airplane 3s ease-out 1s;
+    
+}
+
 .middle {
     border-top: 1px dashed rgba(0, 0, 0, 0.32);
     border-bottom: 1px dashed rgba(0, 0, 0, 0.32);
+    cursor: pointer;
 
     --mask: radial-gradient(
         1.2rem at 1.2rem 1.2rem, transparent 95%, black
     ) -1.2rem -1.2rem;
+
+    transition: transform .3s linear;
 }
 
 .bottom {
     border-radius: 0 0 2.4rem 2.4rem;
+    border-top: 1px dashed rgba(0, 0, 0, 0.32);
+    cursor: pointer;
 
     --mask: radial-gradient(
         1.2rem at 1.2rem top, transparent 95%, black
@@ -129,6 +142,12 @@ section {
 
     -webkit-mask-repeat: repeat-x;
     mask-repeat: repeat-x;
+
+    transition: transform .3s linear;
+}
+
+.middle:hover, .bottom:hover {
+    background-color: #ececec;
 }
 
 .bottom .container {
@@ -179,4 +198,10 @@ footer {
     width: 27rem;
     text-align: center;
     margin: 2rem auto;
+}
+
+@keyframes animation-airplane {
+    to {
+        transform: translate(20rem, -20rem);
+    }
 }
