@@ -16,6 +16,8 @@ body {
     letter-spacing: -0.02em;
     background: linear-gradient(167deg, #8257E5 0%, #271A45) no-repeat;
 
+    background-attachment: fixed;
+
     display: grid;
     place-content: center;
 }
@@ -58,20 +60,32 @@ strong {
 section {
     background-color: #ffff;
     padding: 2.4rem 3.2rem;
+
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+
+    filter: drop-shadow(0rem .4rem 2.4rem rgba(0, 0, 0, 0.25));
 }
 
 #boarding-pass {
-    max-width: 327rem;
     margin: auto;
 }
 
 #ticket {
     margin-top: 2rem;
+    
 }
 
 .top {
     border-radius: 2.4rem 2.4rem 0 0;
     gap: 2.4rem;
+
+    --mask: radial-gradient(
+        1.2rem at 1.2rem bottom, transparent 95%, black
+    ) -1.2rem;
+
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
 }
 
 .top time {
@@ -100,10 +114,21 @@ section {
 .middle {
     border-top: 1px dashed rgba(0, 0, 0, 0.32);
     border-bottom: 1px dashed rgba(0, 0, 0, 0.32);
+
+    --mask: radial-gradient(
+        1.2rem at 1.2rem 1.2rem, transparent 95%, black
+    ) -1.2rem -1.2rem;
 }
 
 .bottom {
     border-radius: 0 0 2.4rem 2.4rem;
+
+    --mask: radial-gradient(
+        1.2rem at 1.2rem top, transparent 95%, black
+    ) -1.2rem;
+
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
 }
 
 .bottom .container {
